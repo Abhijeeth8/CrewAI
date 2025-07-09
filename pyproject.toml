@@ -5,9 +5,14 @@ description = "project1 using crewAI"
 authors = [{ name = "Your Name", email = "you@example.com" }]
 requires-python = ">=3.10,<3.14"
 dependencies = [
+    "crewai",
     "crewai[tools]>=0.134.0,<1.0.0",
     "gradio",
+    "streamlit",
 ]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/project1"]
 
 [project.scripts]
 project1 = "project1.main:run"
